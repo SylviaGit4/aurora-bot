@@ -16,20 +16,11 @@ async def on_ready():
 #Shows list of commands.
 @bot.command()
 async def commands(ctx):
-    await ctx.send("# Commands List \n!commands - Shows list of commands. \n!test_up - Test to see if bot is correctly recieving commands. \n!sum - Adds numbers and shows result.")
+    await ctx.send("# Commands List \n!commands - Shows list of commands. \n!test_up - Test to see if bot is correctly recieving commands. \n!")
 
 #Checks to see if the bot is correctly recieving commands.
 @bot.command()
 async def test_up(ctx):
     await ctx.send("Bot currently up.")
-
-#Shows the sum of numbers in a message.
-@bot.command()
-async def sum(ctx, *arr):
-    result = 0
-    for i in arr:
-        result += int(i)
-    await ctx.send(f"Result: {result}")
-
 
 bot.run(BOT_TOKEN)
